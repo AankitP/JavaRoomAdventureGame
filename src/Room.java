@@ -6,7 +6,7 @@ public class Room
     //fields
     private String Roomname; 
     private String colorOfRoom;//Color of the room
-    private ArrayList<String> exitList = new ArrayList<String>();//list of exits
+    private ArrayList<Exit> exitList = new ArrayList<Exit>();//list of exits
     private ArrayList<Item> itemList = new ArrayList<Item>();//list of items within the room
 
     //default constructor
@@ -17,15 +17,24 @@ public class Room
     }
 
     //constructor
-    public 
+    public Room(String roomName, String colorOfRoom)
+    {
+        this.Roomname = roomName;
+        this.colorOfRoom = colorOfRoom;
+    }
 
     //getters
-    public String getThisRoomsColor()
+    public String getRoomName()
+    {
+        return this.Roomname;
+    }
+
+    public String getRoomColor()
     {
         return this.colorOfRoom;
     }
 
-    public ArrayList<String> getExits()
+    public ArrayList<Exit> getExits()
     {
         return this.exitList;
     }
@@ -35,22 +44,24 @@ public class Room
         return this.itemList;
     }
 
-    //setters
-    private void setColor(String color)
+    //setters/adders
+    public void setColor(String color)
     {
         this.colorOfRoom = color;
     } 
+
+    public void setName(String name)
+    {
+        this.Roomname = name;
+    }
     
-    private void addExit(String e)
+    public void addExit(Exit e)
     {
         this.exitList.add(e);
     } 
 
-    private void addItem(Item enteredItem)
+    public void addItem(Item enteredItem)
     {
         this.itemList.add(enteredItem);
     } 
-
-
-
 }
