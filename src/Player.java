@@ -1,11 +1,11 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class Player 
 {
     private final String playerName;
     private int currentRoom = 1;
-    //need a list of items in inventory
-
+    private ArrayList<Item> inventory = new ArrayList<Item>();
+    
     //constructor
     public Player(String playerName) {
         this.playerName = playerName;
