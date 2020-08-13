@@ -4,11 +4,13 @@ public class Item
     private final boolean isUseable; 
     private final String itemName;
     private final String itemDescription;   
+    private final boolean canBePickedUp = true;
 
-    public Item(boolean isUseable, String itemName, String itemDescription) {
+    public Item(boolean isUseable, String itemName, String itemDescription, boolean canBePickedUp) {
         this.isUseable = isUseable;
         this.itemName = itemName;
         this.itemDescription = itemDescription;
+        this.canBePickedUp = canBePickedUp;
     }
 
     //getters
@@ -25,5 +27,10 @@ public class Item
     public String getItemDescription()
     {
         return this.itemDescription;
+    }
+
+    public boolean getCanBePickedUp()
+    {
+        return this.canBePickedUp;
     }
 }

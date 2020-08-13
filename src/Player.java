@@ -24,12 +24,24 @@ public class Player
         return this.currentRoom;
     }
 
+    //set current room
+    public void moveToRoom(Room newRoom)
+    {
+        this.currentRoom = newRoom;
+        currentRoom.printRoom();
+    }
+
     public String getName()
     {
         return this.playerName;
     }
 
-
-
-
+    //prints inventory with descriptions
+    public void printInventory()
+    {
+        for(int i = 0; i < this.inventory.size(); i++)
+        {
+            System.out.println((i + 1) + "." + this.inventory.get(i).getItemName() + " : " + this.inventory.get(i).getItemDescription());
+        }
+    }
 }
